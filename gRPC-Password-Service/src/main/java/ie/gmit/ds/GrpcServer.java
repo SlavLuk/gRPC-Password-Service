@@ -9,7 +9,7 @@ public class GrpcServer {
 	
 		private Server grpcServer;
 	    private static final Logger logger = Logger.getLogger(GrpcServer.class.getName());
-	    private static final int PORT = 50551;
+	    private static final int PORT = 9090;
 	
 	 private void start() throws IOException {
 		 
@@ -32,7 +32,7 @@ public class GrpcServer {
 	    }
 
 	public static void main(String[] args) throws InterruptedException, IOException {
-	
+
 		 final GrpcServer server = new GrpcServer();
 		 server.start();
 		 server.blockUntilShutdown();

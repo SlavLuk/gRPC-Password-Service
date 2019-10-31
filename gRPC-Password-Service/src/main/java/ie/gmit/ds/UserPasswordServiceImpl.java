@@ -14,22 +14,23 @@ public class UserPasswordServiceImpl extends UserPasswordServiceImplBase {
 		UserResponse.Builder response = UserResponse.newBuilder();
 
 		try {
-			// User
-			String password = request.getPassword();
+			// User's inputs		
 			int userId = request.getUserId();
-			char[] charArrayPass = password.toCharArray();
-
+			// convert string into char array
+			char[] bytePassword = request.getPassword().toCharArray();
+			// generate a hashed password with salt
 			byte[] salt = Passwords.getNextSalt();
-			byte[] hashedPassword = Passwords.hash(charArrayPass, salt);
+			byte[] hashedPassword = Passwords.hash(bytePassword, salt);
 
-
-			response.setHashedPassword(ByteString.copyFrom(hashedPassword))
-					.setSalt(ByteString.copyFrom(salt))
-					.setUserId(userId);
-
+			// build response object
+			response.setUserId(userId)
+					.setHashedPassword(ByteString.copyFrom(hashedPassword))
+					.setSalt(ByteString.copyFrom(salt));
+					
 			responseObserver.onNext(response.build());
+			
 		} catch (Exception e) {
-
+			
 			responseObserver.onNext(response.getDefaultInstanceForType());
 
 		}
@@ -39,7 +40,26 @@ public class UserPasswordServiceImpl extends UserPasswordServiceImplBase {
 	@Override
 	public void validate(UserValidationRequest request, StreamObserver<BoolValue> responseObserver) {
 
-		super.validate(request, responseObserver);
+		try {
+			// User's inputs	
+            char[] bytePassword = request.getPassword().toCharArray();
+            byte[] hashedPassword = request.getHashedPassword().toByteArray();
+            byte[] salt = request.getSalt().toByteArray();
+
+            // Validate password
+            if(Passwords.isExpectedPassword(bytePassword, salt, hashedPassword)){
+            	
+                responseObserver.onNext(BoolValue.newBuilder().setValue(true).build());
+            }
+            
+            else{
+                responseObserver.onNext(BoolValue.newBuilder().setValue(false).build());
+            }
+			
+		} catch (RuntimeException e) {
+			
+			responseObserver.onNext(BoolValue.newBuilder().setValue(false).build());
+		}
 	}
 
 }
