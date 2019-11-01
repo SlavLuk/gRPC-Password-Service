@@ -8,3 +8,5 @@ Place a jar file into bin java directory (C:\Program Files\Java\jdk1.8.0_77\bin)
 Type command :java -jar GRPCserver.jar
 
 To stop server : Ctrl+C
+
+To test server : useful sofware BloomRPC,just add proto file 
