@@ -2,8 +2,11 @@ package ie.gmit.ds;
 
 import java.io.IOException;
 import java.util.logging.Logger;
-
 import io.grpc.*;
+
+/*  Adapted from Adapted from async lab:
+https://github.com/john-french/distributed-systems-labs/tree/master/grpc-async-inventory
+*/
 
 public class GrpcServer {
 	
@@ -11,6 +14,7 @@ public class GrpcServer {
 	    private static final Logger logger = Logger.getLogger(GrpcServer.class.getName());
 	    private static final int PORT = 9090;
 	
+	    //start server
 	 private void start() throws IOException {
 		 
 	        grpcServer = ServerBuilder.forPort(PORT)
