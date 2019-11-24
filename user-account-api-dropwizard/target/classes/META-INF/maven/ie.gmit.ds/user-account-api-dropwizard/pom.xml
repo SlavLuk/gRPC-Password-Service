@@ -64,9 +64,7 @@
 									<mainClass>ie.gmit.ds.UserApiApplication</mainClass>
 								</transformer>
 							</transformers>
-					<protocArtifact>com.google.protobuf:protoc:3.10.0:exe:${os.detected.classifier}</protocArtifact>
-					<pluginId>grpc-java</pluginId>
-					<pluginArtifact>io.grpc:protoc-gen-grpc-java:1.25.0:exe:${os.detected.classifier}</pluginArtifact>
+				
 
 					<createDependencyReducedPom>true</createDependencyReducedPom>
 					<protocArtifact>com.google.protobuf:protoc:3.10.0:exe:${os.detected.classifier}</protocArtifact>
@@ -96,14 +94,14 @@
 					
 				
 			</plugin>
-	<!-- 		<plugin>
+	<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>7</source>
 					<target>7</target>
 				</configuration>
-			</plugin> -->
+			</plugin> 
 		</plugins>
 		<extensions>
 			<extension>
