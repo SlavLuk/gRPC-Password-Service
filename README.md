@@ -9,7 +9,7 @@ Type command :java -jar GRPCserver.jar
 
 To stop server : Ctrl+C
 
-To test server : useful sofware BloomRPC,just add proto file 
+To test server : useful sofware BloomRPC,just add proto file ,http://localhost:9090
 
 ### Update : 
 Fixed onCompleted() method call form UserPasswordServiceImpl.java in validate method from hanging.
@@ -24,6 +24,6 @@ Type command :java -jar UserApiServer.jar server userApiConfig.yml
 
 To stop server : Ctrl+C
 
-To test Api use Postman.
+To test Api use : Postman,http://localhost:9000
 
 ### Swagger uri https://app.swaggerhub.com/apis/SlavLuk/UserAPI/1.0.0
