@@ -13,16 +13,19 @@ public interface UserResponseOrBuilder extends
    * </pre>
    *
    * <code>int32 userId = 1;</code>
+   * @return The userId.
    */
   int getUserId();
 
   /**
    * <code>bytes hashedPassword = 2;</code>
+   * @return The hashedPassword.
    */
   com.google.protobuf.ByteString getHashedPassword();
 
   /**
    * <code>bytes salt = 3;</code>
+   * @return The salt.
    */
   com.google.protobuf.ByteString getSalt();
 }

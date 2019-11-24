@@ -1,5 +1,7 @@
 package ie.gmit.ds;
 
+import java.util.Map;
+
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.ByteString;
 
@@ -60,6 +62,7 @@ public class UserPasswordServiceImpl extends UserPasswordServiceImplBase {
 			
 			responseObserver.onNext(BoolValue.newBuilder().setValue(false).build());
 		}
+		responseObserver.onCompleted();
 	}
 
 }

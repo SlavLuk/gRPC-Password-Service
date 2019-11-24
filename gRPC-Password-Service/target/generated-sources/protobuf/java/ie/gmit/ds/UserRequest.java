@@ -100,6 +100,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 userId = 1;</code>
+   * @return The userId.
    */
   public int getUserId() {
     return userId_;
@@ -109,6 +110,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object password_;
   /**
    * <code>string password = 2;</code>
+   * @return The password.
    */
   public java.lang.String getPassword() {
     java.lang.Object ref = password_;
@@ -124,6 +126,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>string password = 2;</code>
+   * @return The bytes for password.
    */
   public com.google.protobuf.ByteString
       getPasswordBytes() {
@@ -465,6 +468,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 userId = 1;</code>
+     * @return The userId.
      */
     public int getUserId() {
       return userId_;
@@ -475,6 +479,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 userId = 1;</code>
+     * @param value The userId to set.
+     * @return This builder for chaining.
      */
     public Builder setUserId(int value) {
       
@@ -488,6 +494,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 userId = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearUserId() {
       
@@ -499,6 +506,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object password_ = "";
     /**
      * <code>string password = 2;</code>
+     * @return The password.
      */
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
@@ -514,6 +522,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string password = 2;</code>
+     * @return The bytes for password.
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
@@ -530,6 +539,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string password = 2;</code>
+     * @param value The password to set.
+     * @return This builder for chaining.
      */
     public Builder setPassword(
         java.lang.String value) {
@@ -543,6 +554,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string password = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPassword() {
       
@@ -552,6 +564,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string password = 2;</code>
+     * @param value The bytes for password to set.
+     * @return This builder for chaining.
      */
     public Builder setPasswordBytes(
         com.google.protobuf.ByteString value) {

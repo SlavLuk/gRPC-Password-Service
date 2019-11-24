@@ -1,5 +1,7 @@
 package ie.gmit.ds;
 
+
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,7 +23,7 @@ public class GrpcClient {
 	private User user;
 	private ByteString hashedPasspord;
 	private ByteString salt;
-
+	private Map<Integer,User> userMap = new HashMap<>();
 	public GrpcClient(String host, int port) {
 
 		channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build();
@@ -36,12 +38,17 @@ public class GrpcClient {
 		response = syncPasswordService.hash(request);
 
 		hashedPasspord = response.getHashedPassword();
+
+	
+		
 		salt = response.getSalt();
+		
+		
 	}
 
 	public void validationRequest() throws Exception {
 		
-		System.out.println("Please re-enter your password for validation : ");
+	
 		user = menu.getInput();
 		
 		StreamObserver<BoolValue> responseObserver = new StreamObserver<BoolValue>() {
@@ -59,7 +66,7 @@ public class GrpcClient {
 						System.out.println("Invalid password or username ");
 					}
 			
-					onCompleted();
+				//	onCompleted();
 			}
 
 			@Override

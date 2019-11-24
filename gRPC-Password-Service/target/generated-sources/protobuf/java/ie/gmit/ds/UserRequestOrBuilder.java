@@ -13,15 +13,18 @@ public interface UserRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 userId = 1;</code>
+   * @return The userId.
    */
   int getUserId();
 
   /**
    * <code>string password = 2;</code>
+   * @return The password.
    */
   java.lang.String getPassword();
   /**
    * <code>string password = 2;</code>
+   * @return The bytes for password.
    */
   com.google.protobuf.ByteString
       getPasswordBytes();

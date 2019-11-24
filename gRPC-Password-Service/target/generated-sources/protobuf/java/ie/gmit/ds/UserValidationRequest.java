@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string password = 1;</code>
+   * @return The password.
    */
   public java.lang.String getPassword() {
     java.lang.Object ref = password_;
@@ -126,6 +127,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string password = 1;</code>
+   * @return The bytes for password.
    */
   public com.google.protobuf.ByteString
       getPasswordBytes() {
@@ -145,6 +147,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.ByteString hashedPassword_;
   /**
    * <code>bytes hashedPassword = 2;</code>
+   * @return The hashedPassword.
    */
   public com.google.protobuf.ByteString getHashedPassword() {
     return hashedPassword_;
@@ -154,6 +157,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.ByteString salt_;
   /**
    * <code>bytes salt = 3;</code>
+   * @return The salt.
    */
   public com.google.protobuf.ByteString getSalt() {
     return salt_;
@@ -502,6 +506,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string password = 1;</code>
+     * @return The password.
      */
     public java.lang.String getPassword() {
       java.lang.Object ref = password_;
@@ -521,6 +526,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string password = 1;</code>
+     * @return The bytes for password.
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
@@ -541,6 +547,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string password = 1;</code>
+     * @param value The password to set.
+     * @return This builder for chaining.
      */
     public Builder setPassword(
         java.lang.String value) {
@@ -558,6 +566,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string password = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPassword() {
       
@@ -571,6 +580,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string password = 1;</code>
+     * @param value The bytes for password to set.
+     * @return This builder for chaining.
      */
     public Builder setPasswordBytes(
         com.google.protobuf.ByteString value) {
@@ -587,12 +598,15 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.ByteString hashedPassword_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes hashedPassword = 2;</code>
+     * @return The hashedPassword.
      */
     public com.google.protobuf.ByteString getHashedPassword() {
       return hashedPassword_;
     }
     /**
      * <code>bytes hashedPassword = 2;</code>
+     * @param value The hashedPassword to set.
+     * @return This builder for chaining.
      */
     public Builder setHashedPassword(com.google.protobuf.ByteString value) {
       if (value == null) {
@@ -605,6 +619,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>bytes hashedPassword = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearHashedPassword() {
       
@@ -616,12 +631,15 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.ByteString salt_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes salt = 3;</code>
+     * @return The salt.
      */
     public com.google.protobuf.ByteString getSalt() {
       return salt_;
     }
     /**
      * <code>bytes salt = 3;</code>
+     * @param value The salt to set.
+     * @return This builder for chaining.
      */
     public Builder setSalt(com.google.protobuf.ByteString value) {
       if (value == null) {
@@ -634,6 +652,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>bytes salt = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSalt() {
       

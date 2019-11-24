@@ -13,6 +13,7 @@ public interface UserValidationRequestOrBuilder extends
    * </pre>
    *
    * <code>string password = 1;</code>
+   * @return The password.
    */
   java.lang.String getPassword();
   /**
@@ -21,17 +22,20 @@ public interface UserValidationRequestOrBuilder extends
    * </pre>
    *
    * <code>string password = 1;</code>
+   * @return The bytes for password.
    */
   com.google.protobuf.ByteString
       getPasswordBytes();
 
   /**
    * <code>bytes hashedPassword = 2;</code>
+   * @return The hashedPassword.
    */
   com.google.protobuf.ByteString getHashedPassword();
 
   /**
    * <code>bytes salt = 3;</code>
+   * @return The salt.
    */
   com.google.protobuf.ByteString getSalt();
 }
