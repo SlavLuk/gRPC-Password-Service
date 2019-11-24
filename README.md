@@ -10,3 +10,6 @@ Type command :java -jar GRPCserver.jar
 To stop server : Ctrl+C
 
 To test server : useful sofware BloomRPC,just add proto file 
+
+### Update : 
+Fixed onCompleted() method call form UserPasswordServiceImpl.java in validate method from hanging.
